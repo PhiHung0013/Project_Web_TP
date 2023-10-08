@@ -1,0 +1,90 @@
+﻿@{
+    ViewBag.Title = "Danh Sách Khách Hàng";
+}
+
+
+<div class="box box-primary ">
+    <div class=" box-body ">
+        <form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+                <input type="text" name="Searchvalue"
+                       class="form-control" placeholder="Nhập Tên Khách Hàng  Cần Tìm Kiếm..." _mstplaceholder="99723" _msthash="63">
+                <span class="input-group-btn">
+                    <button type="submit" name="search" id="search-btn" class="btn btn-flat">
+                        <i class="fa fa-search"></i>
+
+                    </button>
+                    <a href="~/Admin/Customer/Create " class="btn btn-flat btn-primary ">
+                        <i class="fa fa-plus"> Bổ Sung</i>
+
+                    </a>
+                </span>
+            </div>
+        </form>
+        <!--Danh Sách Nhà Cung Cấp-->
+        <p>
+        <p style=" margin: 10px 0 10px 0 ">
+
+        </p>
+        Có <strong> 1,024 </strong> Khách Hàng. Hiện đang ở trang 1 trên tổng số 200 trang
+
+        </p>
+        <div class table=" table-responsive ">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Tên Khách Hàng</th>
+                        <th>Tên Liên Hệ</th>
+                        <th>Địa Chỉ</th>
+                        <th>Điện Thoại</th>
+                        <th>Email</th>
+                        <th>password</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (int i = 1; i <= 10; i++)
+                    {
+                        <tr>
+                            <td>Hồ Thị Tâm</td>
+                            <td>cô Tâmtd>
+                            <td>Thừa Thiên Huế</td>
+                            <td>09503277635</td>
+                            <td>tam03021990@myshop.com</td>
+                            <td>123456</td>
+                            <td>
+                                <a href="~/Admin/Customer/Edit/123 " class="btn-xs btn-info ">
+                                    <i class="fa fa-edit"></i>
+                                </a>
+                                <a href="~/Admin/Customer/Delete/123 " class="btn btn-xs btn-danger ">
+                                    <i class="fa fa-remove"></i>
+                                </a>
+
+                            </td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        </div>
+        <div class="text-center ">
+            <ul class="pagination">
+                <li><a href="#">1</a></li>
+                <li class="active"><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+
+            </ul>
+
+            <ul class="breadcrumb">
+                <li class="active">Home</li>
+                <li><a href="#">Private</a></li>
+                <li><a href="#">Pictures</a></li>
+                <li><a href="#">Hùng Đẹp Trai Mang Dép Lê </a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>

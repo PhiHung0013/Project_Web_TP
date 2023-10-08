@@ -1,0 +1,79 @@
+﻿@{
+    ViewBag.Title = "Danh sách nhân viên";
+}
+
+
+<div class="box box-primary">
+    <div class="box-body">
+        <!-- Form tìm kiếm -->
+        <div class="input-group">
+            <input type="text" name="searchValue" class="form-control" placeholder="Nhập thông tin nhân viên cần tìm...">
+            <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat">
+                    <i class="fa fa-search"></i>
+                </button>
+                <a href="~/Admin/Employee/Create" class="btn btn-info" role="button">
+                    <li class="fa fa-plus"></li> Bổ sung
+                </a>
+            </span>
+        </div>
+
+        <!-- Danh sách loại hàng-->
+        <p style="margin:10px 0px 10px 0px">
+            Có <strong>1,024</strong> nhân viên. Hiện bạn đang ở trang <strong>1</strong> trong tổng số <strong>200</strong> trang.
+        </p>
+
+        @for (int i = 0; i < 2; i++)
+        {
+            <div class="row">
+                @for (int j = 0; j < 3; j++)
+                {
+                    <div class="col-sm-4">
+                        <div class="box box-body box-profile">
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <h5 class="profile-username"> Nguyễn Thị Thanh Ngân</h5>
+                                </div>
+                                <div class="col-sm-4">
+                                    <a href="~/Admin/Employee/Edit/123" class="btn btn-xs btn-info">
+                                        <li class="fa fa-edit"></li>
+                                    </a>
+                                    <a href="~/Admin/Employee/ChangePassword/123" class="btn btn-xs btn-warning">
+                                        <li class="fa fa-key"></li>
+                                    </a>
+                                    <a href="~/Admin/Employee/Delete/123" class="btn btn-xs btn-danger">
+                                        <li class="fa fa-remove"></li>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <img class="profile-user-img img-responsive img-circle" src="~/image/mygirl.jpg" alt="User profile picture">
+                                </div>
+
+                                <div class="col-sm-8">
+                                    <p class="text-muted text-left">1973-11-01</p>
+
+                                    <p class="text-muted text-left">06269045225</p>
+
+                                    <p class="text-muted text-left">nguyenthithanhngan@mycompany.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+
+
+        <div class="text-center">
+            <ul class="pagination">
+                <li><a href="#">1</a></li>
+                <li class="active"><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
